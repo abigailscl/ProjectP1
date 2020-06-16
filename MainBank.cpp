@@ -14,7 +14,7 @@ void goy(int y);
 int main() {
 	int Menu; // Controla el menu seleccionado actualmente
 	
-	printf("\n---MENU DINAMICO EN C---\nSeleccione opcion:\n");
+	printf("\n\t------Bank------\n\n");
 	// ir a la linea de inicio, DEBE ir antes del menu seleccionable!!! No olvidar
 	goy(LineaDeInicio); 
 	printf("\tRegistrar Cliente\n");
@@ -50,7 +50,7 @@ int main() {
 	}
 
 	// Opcional... Mostrar en pantalla el numero seleccionado
-	goy(10);
+	goy(25);
 	printf("Has seleccionado la opcion %d!\n\n\n", Menu);
 
 	/*
