@@ -5,7 +5,7 @@
 using namespace std;
 
 #define MenuInicio 1     // Establecer el primer numero del menu
-#define MenuFin 5	 // Establecer último numero del menu
+#define MenuFin 3	 // Establecer último numero del menu
 #define LineaDeInicio 2  // Establecer la linea donde empieza el menu
 
 // ir a una línea determinada
@@ -14,18 +14,16 @@ void goy(int y);
 int main() {
 	int Menu; // Controla el menu seleccionado actualmente
 	
-	printf("---MENU DINAMICO EN C---\nSeleccione opcion:");
+	printf("\n---MENU DINAMICO EN C---\nSeleccione opcion:\n");
 	// ir a la linea de inicio, DEBE ir antes del menu seleccionable!!! No olvidar
 	goy(LineaDeInicio); 
-/*	printf("\t1. Descripcion de la opcion 1\n");
-	printf("\t2. Descripcion de la opcion 2\n");
-	printf("\t3. Descripcion de la opcion 3\n");
-	printf("\t4. Descripcion de la opcion 4\n");
-	printf("\t5. Descripcion de la opcion 5\n");*/
+	printf("\tRegistrar Cliente\n");
+	printf("\tTransacciones \n");
+	printf("\tSalir \n");
 
 	Menu = 1;
 	goy(LineaDeInicio);
-	printf("---->");
+	printf("----->");
 
 
 	while(true) {
@@ -36,16 +34,16 @@ int main() {
 			// Si Menu == 1, Menu = MenuFin, sino, Menu = Menu -1
 			Menu = Menu == MenuInicio ? MenuFin: --Menu;
 			// Eliminar la flecha actual
-			printf("\r     ");
+			printf("\r      ");
 			// Ir a la linea del próximo menu
 			goy(LineaDeInicio + Menu-1);
 			// Poner la nueva flecha
-			printf("---->");
+			printf("----->");
 		} else if (GetAsyncKeyState(VK_DOWN)) {
 			Menu = Menu == MenuFin ? MenuInicio: ++Menu;
-			printf("\r     ");
+			printf("\r      ");
 			goy(LineaDeInicio + Menu-1);
-			printf("---->");
+			printf("----->");
 		} else if (GetAsyncKeyState(VK_RETURN)) { 
 			break;
 		}
@@ -67,7 +65,6 @@ int main() {
 
 
 void goy(int y) {
-	cout<<"ingreso a goy";
 	// Obtener handle de la consola
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	// Establecer posición del nuevo cursor
