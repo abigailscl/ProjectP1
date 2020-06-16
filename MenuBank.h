@@ -37,18 +37,45 @@ class MenuBank
 		int Menu;
 		
 };
+////////////////////////////////////////////////////////////////////////
+// Name:    	MenuBank::MenuBank(int n)
+// Purpose:    Constructor of  class MenuBank
+// Parameters: int n
+// Return:     
+////////////////////////////////////////////////////////////////////////
 MenuBank::MenuBank(int n)
 {
 	setMenu(n);
 }
+
+////////////////////////////////////////////////////////////////////////
+// Name:       void MenuBank::setMenu(int n)
+// Purpose:     Implementation of  MenuBank::setMenu(int n)
+// Parameters: int n
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void MenuBank::setMenu(int n)
 {
 	Menu = n;
 }
+
+////////////////////////////////////////////////////////////////////////
+// Name:       int MenuBank::setMenu()
+// Purpose:     Implementation of  MenuBank::getMenu(int n)
+// Parameters:  void
+// Return:     int
+////////////////////////////////////////////////////////////////////////
 int MenuBank::getMenu()
 {
 	 return Menu;
 }
+
+////////////////////////////////////////////////////////////////////////
+// Name:       void MenuBank::goy(int y)
+// Purpose:     Implementation of  MenuBank::goy(int y)
+// Parameters:  int y
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 void MenuBank::goy(int y) {
 	// Obtener handle de la consola
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -59,10 +86,16 @@ void MenuBank::goy(int y) {
 	// Colocar el cursor en el nuevo sitio
 	SetConsoleCursorPosition(hConsole, pos);
 }
+
+////////////////////////////////////////////////////////////////////////
+// Name:       int MenuBank::menuOptions()
+// Purpose:     Implementation of  int MenuBank::menuOptions()
+// Parameters:  void 
+// Return:     int
+////////////////////////////////////////////////////////////////////////
 int MenuBank::menuOptions()
 {
 	printf("\n\t------Bank------\n\n");
-	// ir a la linea de inicio, DEBE ir antes del menu seleccionable!!! No olvidar
 	goy(LineaDeInicio); 
 	printf("\tRegistrar Cliente\n");
 	printf("\tTransacciones \n");
@@ -94,18 +127,8 @@ int MenuBank::menuOptions()
 		}
 	}
 
-	// Opcional... Mostrar en pantalla el numero seleccionado
 	goy(25);
 	printf("Has seleccionado la opcion %d!\n\n\n", Menu);
-
-	/*
-	
-	AQUI SE PUEDE HACER EL TIPICO SWITCH ANALIZANDO LA OPCION
-        QUE SELECCIONÓ EL USUARIO
-	
-	*/
-
-	system("pause");
 	return getMenu();
 }
 
