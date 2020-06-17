@@ -1,0 +1,12 @@
+﻿  BankStream.cpp
+C:\Users\Charlie\source\repos\BankProject\BankProject\BankStream.h(7,9): warning C4068: unknown pragma
+  Date.cpp
+  Transaction.cpp
+  Generating Code...
+C:\Users\Charlie\source\repos\BankProject\BankProject\Transaction.cpp(7): error C4716: 'Transaction::consult': must return a value
+C:\Users\Charlie\source\repos\BankProject\BankProject\Transaction.cpp(9): error C4716: 'Transaction::withdraw': must return a value
+C:\Users\Charlie\source\repos\BankProject\BankProject\Transaction.cpp(11): error C4716: 'Transaction::deposit': must return a value
+C:\Users\Charlie\source\repos\BankProject\BankProject\Date.cpp(18): error C4716: 'Date::calcDate': must return a value
+C:\Users\Charlie\source\repos\BankProject\BankProject\BankStream.cpp(8): error C4716: 'BankStream::readData': must return a value
+C:\Users\Charlie\source\repos\BankProject\BankProject\BankStream.cpp(6): error C4716: 'BankStream::registerPerson': must return a value
+C:\Users\Charlie\source\repos\BankProject\BankProject\BankStream.cpp(10): error C4716: 'BankStream::searchCustomer': must return a value
